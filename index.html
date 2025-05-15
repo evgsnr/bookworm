@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Книжный магазин абсурда</title>
+  <style>
+    /* ===== Общий стиль ===== */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-image: url('https://images.unsplash.com/photo-1553729784-e91953dec042');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: #fff;
+    }
+
+    /* ===== Затемнение фона ===== */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.75);
+      z-index: -1;
+    }
+
+    /* ===== Заголовок ===== */
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+
+    /* ===== Сетка книг ===== */
+    .book-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .book {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 10px;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+      transition: transform 0.2s ease;
+    }
+
+    .book:hover {
+      transform: scale(1.03);
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .book img {
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+
+    .book-title {
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #f0f0f0;
+    }
+
+    @media (max-width: 500px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+
+      .book-title {
+        font-size: 0.85rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Книжный Червь</h1>
+  <div class="book-grid">
+    <!-- Повтори блок ниже для каждой книги -->
+    <div class="book">
+      <img src="https://img.freepik.com/free-photo/top-view-book-with-zebra-figurine-top-animal-day_23-2148668829.jpg?semt=ais_hybrid&w=740" alt="1984">
+      <div class="book-title">Джордж Оруэлл — 1984</div>
+    </div>
+    <div class="book">
+      <img src="https://img.freepik.com/free-photo/top-view-book-with-zebra-figurine-top-animal-day_23-2148668829.jpg?semt=ais_hybrid&w=740" alt="Мастер и Маргарита">
+      <div class="book-title">Михаил Булгаков — Мастер и Маргарита</div>
+    </div>
+    <div class="book">
+      <img src="https://img.freepik.com/free-photo/top-view-book-with-zebra-figurine-top-animal-day_23-2148668829.jpg?semt=ais_hybrid&w=740" alt="Гарри Поттер">
+      <div class="book-title">Дж. К. Роулинг — Гарри Поттер</div>
+    </div>
+    <div class="book">
+      <img src="https://img.freepik.com/free-photo/top-view-book-with-zebra-figurine-top-animal-day_23-2148668829.jpg?semt=ais_hybrid&w=740" alt="Преступление и наказание">
+      <div class="book-title">Фёдор Достоевский — Преступление и наказание</div>
+    </div>
+     <div class="book">
+  <img src="https://img.freepik.com/free-photo/top-view-book-with-zebra-figurine-top-animal-day_23-2148668829.jpg?semt=ais_hybrid&w=740" alt="Шоколадные крокозябры">
+  <div class="book-title">Аристрарх Сладкоежкин — Шоколадные крокозябры</div>
+</div>
+<div class="book">
+  <img src="https://img.freepik.com/free-photo/top-view-book-with-zebra-figurine-top-animal-day_23-2148668829.jpg?semt=ais_hybrid&w=740" alt="Теория бурчащего чайника">
+  <div class="book-title">Флавий Обломов — Теория бурчащего чайника</div>
+</div>
+<div class="book">
+  <img src="https://img.freepik.com/free-photo/top-view-book-with-zebra-figurine-top-animal-day_23-2148668829.jpg?semt=ais_hybrid&w=740" alt="Мемуары лягушки психиатра">
+  <div class="book-title">Квак С. Фрейд — Мемуары лягушки психиатра</div>
+</div>
+<div class="book">
+  <img src="https://img.freepik.com/free-photo/top-view-book-with-zebra-figurine-top-animal-day_23-2148668829.jpg?semt=ais_hybrid&w=740" alt="Хруст во времени">
+  <div class="book-title">Савелий Скрипунов — Хруст во времени</div>
+</div>
+<div class="book">
+  <img src="https://img.freepik.com/free-photo/top-view-book-with-zebra-figurine-top-animal-day_23-2148668829.jpg?semt=ais_hybrid&w=740" alt="Гротеск и огурец">
+  <div class="book-title">Лукьян Лаконич — Гротеск и огурец</div>
+</div>
+<div class="book">
+  <img src="https://img.freepik.com/free-photo/top-view-book-with-zebra-figurine-top-animal-day_23-2148668829.jpg?semt=ais_hybrid&w=740" alt="Как я подружился с пылесосом">
+  <div class="book-title">Электр Ф. Щёткин — Как я подружился с пылесосом</div>
+</div>
+<div class="book">
+  <img src="https://img.freepik.com/free-photo/top-view-book-with-zebra-figurine-top-animal-day_23-2148668829.jpg?semt=ais_hybrid&w=740" alt="Пельмени из бесконечности">
+  <div class="book-title">Зинаида Лапшина — Пельмени из бесконечности</div>
+</div>
+<div class="book">
+  <img src="https://img.freepik.com/free-photo/top-view-book-with-zebra-figurine-top-animal-day_23-2148668829.jpg?semt=ais_hybrid&w=740" alt="Заговор мелованной бумаги">
+  <div class="book-title">Илья Типографов — Заговор мелованной бумаги</div>
+</div>
+<div class="book">
+  <img src="https://img.freepik.com/free-photo/top-view-book-with-zebra-figurine-top-animal-day_23-2148668829.jpg?semt=ais_hybrid&w=740" alt="Жужжащая этика">
+  <div class="book-title">Борис Жукофф — Жужжащая этика</div>
+</div>
+<div class="book">
+  <img src="https://img.freepik.com/free-photo/top-view-book-with-zebra-figurine-top-animal-day_23-2148668829.jpg?semt=ais_hybrid&w=740" alt="Слёзы в горошек">
+  <div class="book-title">Нонна Ткаль — Слёзы в горошек</div>
+</div>
+<div class="book">
+  <img src="https://img.freepik.com/free-photo/top-view-book-with-zebra-figurine-top-animal-day_23-2148668829.jpg?semt=ais_hybrid&w=740" alt="Левый носок Бога">
+  <div class="book-title">Эйбрам Синтепон — Левый носок Бога</div>
+</div>
+<div class="book">
+  <img src="https://img.freepik.com/free-photo/top-view-book-with-zebra-figurine-top-animal-day_23-2148668829.jpg?semt=ais_hybrid&w=740" alt="Варенье из времени">
+  <div class="book-title">Прасковья Клок — Варенье из времени</div>
+</div>
+<div class="book">
+  <img src="https://img.freepik.com/free-photo/top-view-book-with-zebra-figurine-top-animal-day_23-2148668829.jpg?semt=ais_hybrid&w=740" alt="Ананас и анархия">
+  <div class="book-title">Лео Кожурин — Ананас и анархия</div>
+</div>
+<div class="book">
+  <img src="https://img.freepik.com/free-photo/top-view-book-with-zebra-figurine-top-animal-day_23-2148668829.jpg?semt=ais_hybrid&w=740" alt="Ода фантомному чиху">
+  <div class="book-title">Ярополк Апчхи — Ода фантомному чиху</div>
+</div>
+<div class="book">
+  <img src="https://img.freepik.com/free-photo/top-view-book-with-zebra-figurine-top-animal-day_23-2148668829.jpg?semt=ais_hybrid&w=740" alt="Гармония жужжания">
+  <div class="book-title">Муза Канделяброва — Гармония жужжания</div>
+</div>
+<div class="book">
+  <img src="https://img.freepik.com/free-photo/top-view-book-with-zebra-figurine-top-animal-day_23-2148668829.jpg?semt=ais_hybrid&w=740" alt="Цирк в чемодане">
+  <div class="book-title">Федя Вальдшнеп — Цирк в чемодане</div>
+</div>
+<div class="book">
+  <img src="https://img.freepik.com/free-photo/top-view-book-with-zebra-figurine-top-animal-day_23-2148668829.jpg?semt=ais_hybrid&w=740" alt="Философия тапка">
+  <div class="book-title">Аркадий Мягков — Философия тапка</div>
+</div>
+<div class="book">
+  <img src="https://img.freepik.com/free-photo/top-view-book-with-zebra-figurine-top-animal-day_23-2148668829.jpg?semt=ais_hybrid&w=740" alt="Пикник на параллельной улице">
+  <div class="book-title">Тоня Штрудель — Пикник на параллельной улице</div>
+</div>
+<div class="book">
+  <img src="https://img.freepik.com/free-photo/top-view-book-with-zebra-figurine-top-animal-day_23-2148668829.jpg?semt=ais_hybrid&w=740" alt="Пятый роман в четырёх актах">
+  <div class="book-title">Клавдий Гусев — Пятый роман в четырёх актах</div>
+</div>
+<div class="book">
+  <img src="https://img.freepik.com/free-photo/top-view-book-with-zebra-figurine-top-animal-day_23-2148668829.jpg?semt=ais_hybrid&w=740" alt="Сновидения морковки">
+  <div class="book-title">Авдотья Хрустикова — Сновидения морковки</div>
+</div>
+<div class="book">
+      <img src="https://img.freepik.com/free-photo/top-view-book-with-zebra-figurine-top-animal-day_23-2148668829.jpg?semt=ais_hybrid&w=740" alt="Алхимик">
+      <div class="book-title">Пауло Коэльо — Алхимик</div>
+ </div>
+<div class="book">
+      <img src="https://img.freepik.com/free-photo/top-view-book-with-zebra-figurine-top-animal-day_23-2148668829.jpg?semt=ais_hybrid&w=740" alt="Три товарища">
+      <div class="book-title">Эрих Мария Ремарк — Три товарища</div>
+    </div>
+    <div class="book">
+      <img src="https://img.freepik.com/free-photo/top-view-book-with-zebra-figurine-top-animal-day_23-2148668829.jpg?semt=ais_hybrid&w=740" alt="Унесённые ветром">
+      <div class="book-title">Маргарет Митчелл — Унесённые ветром</div>
+    </div>
+    <!-- ... добавь по вкусу -->
+  </div>
+</body>
+</html>
