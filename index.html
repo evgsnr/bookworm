@@ -198,62 +198,20 @@
       <div class="book-title">Маргарет Митчелл — Унесённые ветром</div>
     </div>
     <!-- ... добавь по вкусу -->
-  </div>
-  <!-- START OF ALTCRAFT PIXEL CODE -->
-<script type="text/javascript">
-!function(){
-  var e = {
-    url: "https://pxl.demo.altcraft.com/pixel?k=4jtMs0znxJBLP2E244ZvZReFPriV1BZRBGO1GEwAThVArr0fotI1cw%3D%3D&s=CJKSoX%2FZNFM%3D",
-    goals: "pageView", // можешь указать свою цель
-    value: parseFloat("1"),
-    timeout: parseInt("0"),
-    after_scroll: JSON.parse("false"),
-    auto_load: JSON.parse("false") // отключаем автоотправку без сопоставления
-  };
-
-  var sendPixel = function(goal, value, match, update, matching_mode, db_id){
-    var goals = [].concat(goal).map(function(g){ return encodeURIComponent(g); }).join(","),
-        val = encodeURIComponent(String(value || 0)),
-        mmode = encodeURIComponent(matching_mode || ""),
-        db = encodeURIComponent(db_id || 0),
-        matchStr = encodeURIComponent(JSON.stringify(match || {})),
-        updateStr = encodeURIComponent(JSON.stringify(update || {}));
-    
-    setTimeout(function(){
-      (new Image).src = [
-        e.url,
-        "goals=" + goals,
-        "value=" + val,
-        "db_id=" + db,
-        "mmode=" + mmode,
-        "match=" + matchStr,
-        "update=" + updateStr
-      ].join("&");
-    }, e.timeout);
-  };
-
-  window.ak_pixel_push = function(goal, value, match, update, matching_mode, db_id){
-    sendPixel(goal, value, match, update, matching_mode, db_id);
-  };
-
-  document.addEventListener("DOMContentLoaded", function(){
-    var profileId = new URLSearchParams(window.location.search).get("profile_id");
-    if (profileId) {
-      console.log("Отправка пикселя с profile_id:", profileId);
-      window.ak_pixel_push(
-        e.goals,
-        e.value,
-        { profile_id: profileId },
-        {},
-        "profile_id",
-        0
-      );
-    } else {
-      console.warn("profile_id не найден в URL");
-    }
-  });
-}();
+<script>
+    (function (window, document, dataLayerName, containerID) {
+        window[dataLayerName] = window[dataLayerName] || [];
+        window[dataLayerName].push({ 'start': new Date().getTime(), event: 'actm-js' });
+        var firstScript = document.getElementsByTagName('script')[0];
+        var script = document.createElement('script');
+        var dl = dataLayerName !== 'acDataLayer' ? '&l=' + dataLayerName : '';
+        script.async = true;
+        script.src = 'https://pxl.demo.altcraft.com/actm/js/actm.js?id=' + containerID + dl;
+        script.type = 'module';
+        if (firstScript && firstScript.parentNode) {
+            firstScript.parentNode.insertBefore(script, firstScript);
+        }
+    }(window, document, 'acDataLayer', 'ATM-pBPujzunwQKt-tHX'));
 </script>
-<!-- END OF ALTCRAFT PIXEL CODE -->
 </body>
 </html>
